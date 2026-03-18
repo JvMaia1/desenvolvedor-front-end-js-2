@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buscar endereço por CEP</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .cep-linha {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cep-linha label {
+            display: inline;
+            margin-bottom: 0;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .cep-linha input {
+            flex: 1;
+        }
+
+        #resultado {
+            margin: 0;
+            min-width: 180px;
+            font-weight: 600;
+        }
+
+        .cep-bloco .erro-msg {
+            margin-top: 6px;
+        }
+
+        .linha {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+        }
+
+
+        .linha[hidden],
+        #grupo-endereco[hidden] {
+            display: none;
+        }
+
+        .campo {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        :focus-visible {
+            outline: 2px solid #007bff;
+            outline-offset: 2px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input.erro {
+            border-color: red;
+        }
+
+        input.ok {
+            border-color: green;
+        }
+
+        .erro-msg {
+            font-size: 14px;
+            color: red;
+            margin-top: 4px;
+            display: block;
+            min-height: 18px;
+        }
+
+        .sucesso {
+            color: green;
+        }
+
+        .nao-encontrado {
+            color: red;
+        }
+
+        .ampulheta {
+            max-width: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Buscar endereço</h1>
+
+        <form method="post" novalidate autocomplete="off">
+
+            <!-- CEP -->
+            <div class="cep-bloco">
+                <div class="linha cep-linha">
+                    <label for="cep">CEP</label>
+
+                    <input autocomplete="off" type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9"
+                        aria-describedby="erro-cep">
+
+                    <p id="resultado"></p>
+                </div>
+
+                <span id="erro-cep" class="erro-msg"></span>
+            </div>
+
+            <!-- ENDEREÇO -->
+            <div id="grupo-endereco" hidden>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="logradouro">Logradouro</label>
+                        <input type="text" id="logradouro" name="logradouro">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro" name="bairro">
+                    </div>
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" name="estado">
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+</body>
+
+<script type="module" src="js/14-busca-por-cep.js"></script>
+
+</html>
