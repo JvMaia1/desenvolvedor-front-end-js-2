@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxe geral do JS</title>
+</head>
+
+<body>
+    <h1>Começando com a linguagem</h1>
+    <hr>
+    
+    <script>
+        console.log("Olá, mundo!"); // Comando e saida para o console 
+
+        /* Manipulação de dados em memoria */
+
+        // Variavel: palavra-chave let
+        let ano = 2026;
+
+        // Constante: palavra-chave const
+        const aluno = "João";
+
+        console.log(ano);
+        console.log(aluno);
+
+        //ano = 2027; // Reatrubuição de valor
+        console.log(ano);
+
+        // Constantes não permitem  mudança de valor
+        // aluno = "Dio";
+
+        let teste1, teste2, teste3;
+        console.log(teste1);
+
+        teste1 = "Agora tem alguma coisa aqui";
+        console.log(teste1);
+        
+        //Exercícios de Variáveis e Operações
+
+        let x = 21, y = 8, soma = x+y, subtracao = x-y, multiplicacao  = x*y, divisao = Number((x/y).toFixed(1)); //  Definição das variaveis, operações e arredondamento da divisão para 1 casa decimal
+
+        console.log("soma = " + soma +",","subtração = " + subtracao + ",", "multiplicação = " + multiplicacao +",", "divisão = " + divisao 
+        +"."); // Exibição dos resultados das operações
+        
+        // Organizando os valores em ordem crescente
+
+        console.log("Organizando os valores em ordem crescente:");
+        
+        
+        let index = [soma, subtracao, multiplicacao, divisao]; // Criação de um array para armazenar os resultados das operações
+
+        index = index.sort((a, b) => a - b); // Ordenação do array em ordem crescente usando a função de comparação
+
+        index.forEach(function(item){
+            console.log(item);
+        }); // Exibição dos valores ordenados usando o método forEach para iterar sobre o array e imprimir cada item no console
+    
+
+        // Fim do exercicio
+        
+        let a = 100,b = 200,c = 300; //Defiição dos valores
+
+        let media = (a + b + c) / 3; // Calculo da media
+
+        console.log("A média de " + a + ", " + b + " e " + c + " é: " + media); // Impressão do resultado
+
+        // Exercicio de concatenação:
+        console.log(
+           "O aluno " + aluno + " esta estudando programação no ano de " + ano+"."
+        );
+
+        // Exercicios de Template string, metodo moderno
+        console.log(
+            `O aluno ${aluno} esta estudando programação no ano de ${ano}.`
+        );
+
+        //Ex: escape, aspas duplas, aspas simples, crase
+        let estiloMusical = `Rock 'n' Roll`
+
+        let estiloMusicalV2 = "Rock 'n' Roll"
+ 
+        let estiloMusicalV3 = 'Rock \'n\' Roll'
+
+        let estiloMusicalV4 = 'Rock "n" Roll'
+
+        console.log(estiloMusical);
+
+        // Impressão dos resultados usando template string
+        console.log(
+            `Resultado das operações matematicas: Soma = ${soma}, Subtração = ${subtracao}, Multiplicação = ${multiplicacao}, Divisão = ${divisao}`
+        );
+               
+        
+    </script>
+</body>
+
+</html>

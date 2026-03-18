@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de DOM e Eventos</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+
+        hr {
+            margin: 40px 0
+        }
+
+        .oculto {
+            display: none
+        }
+
+        .feito {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .feito::marker {
+            content: "✓ ";
+            color: green;
+        }
+
+        img {
+            max-width: 300px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 80px;
+        }
+
+        #contador.excesso {
+            color: red;
+            font-weight: bold;
+        }
+
+        progress.concluido {
+            accent-color: green;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Exemplos de DOM e Eventos</h1>
+
+        <hr>
+
+        <h2>1 - Contador</h2>
+        <p id="valor">0</p>
+        <button id="somar">+</button>
+        <button id="subtrair">-</button>
+
+        <hr>
+
+        <h2>2 - Mostrar / Esconder</h2>
+        <button id="mostrarOuEsconder">Esconder</button>
+        <p id="textoQueSome">
+            Este texto pode desaparecer da página.
+        </p>
+
+
+        <hr>
+
+        <h2>3 - Trocar imagem</h2>
+        <img id="foto" src="https://picsum.photos/300/200?1" alt="">
+
+        <br><br>
+        
+
+
+        <button data-imagem="https://picsum.photos/300/200?1" data-alt="paisagem 1">Foto 1</button>
+        <button data-imagem="https://picsum.photos/300/200?2" data-alt="paisagem 2">Foto 2</button>
+        <button data-imagem="https://picsum.photos/300/200?3" data-alt="paisagem 3">Foto 3</button>
+
+        <hr>
+
+        <h2>4 - Contador de caracteres</h2>
+        <textarea id="mensagem" maxlength="100"></textarea>
+        <p>Caracteres: <span id="contador">0</span></p>
+        <p>Restantes: <span id="regressivo">100 </span></p>
+
+        <hr>
+
+        <h2>5 - Detectar teclas</h2>
+        <p>Abra o console e pressione teclas.</p>
+        <p id="tecla">Tecla pressionada: <b></b></p>
+
+        <hr>
+        <div id="relacao-tarefas">
+            <h2>6 - Lista de tarefas</h2>
+            <h3>Total de tarefas: <span id="total">0</span></h3>
+            <input type="text" id="tarefa">
+            <button id="adicionar">Adicionar</button>
+            <ul id="lista"></ul>
+        </div>
+
+        <hr>
+
+    <div id="progresso">
+        <h2>7 - Barra de progresso</h2>
+        <progress id="barra" value="0" max="100"></progress>
+        
+
+
+        <button id="carregar">Carregar</button>
+        <button id="limpar">Limpar</button>
+    </div>
+    
+        <hr>
+
+
+        <h2>8 - Envio de formulário</h2>
+
+        <form id="form-exemplo">
+            <label for="campo-nome">Nome:</label>
+            <input type="text" id="campo-nome" required>
+
+            <br>
+
+            <label for="campo-idade">Idade:</label>
+            <input type="number" id="campo-idade" required min ='0' max='120'>
+
+            <br>
+
+            <button>Enviar</button>
+        </form>
+
+        <p id="saida"></p>
+
+
+        <hr>
+
+        <h2>9 - Exibir senha</h2>
+
+        <p id="relacao-senha">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha">
+        </p>
+            
+        <button id="mostrar-senha">👁 Mostrar senha</button>
+    </div>
+
+
+    <script src="js/11-introducao-dom-eventos.js"></script>
+</body>
+
+</html>
