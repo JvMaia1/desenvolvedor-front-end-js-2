@@ -1,0 +1,53 @@
+/* Console Simulation Style */
+#console-output {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    max-height: 400px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid #333;
+}
+
+#console-output .log-entry {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #2d2d2d;
+    padding-bottom: 3px;
+    display: flex;
+}
+
+#console-output .log-entry:last-child {
+    border-bottom: none;
+}
+
+#console-output .log-type {
+    margin-right: 10px;
+    font-weight: bold;
+    min-width: 60px;
+    text-transform: uppercase;
+    font-size: 11px;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+#console-output .type-log { background-color: #3e3e3e; color: #fff; }
+#console-output .type-warn { background-color: #855d10; color: #fff; }
+#console-output .type-error { background-color: #8a1f1f; color: #fff; }
+
+#console-output .log-msg {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+#console-output .log-time {
+    color: #6a9955;
+    margin-right: 10px;
+    font-size: 11px;
+}
