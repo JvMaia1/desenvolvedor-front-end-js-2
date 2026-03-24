@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria com SimpleLightbox</title>
+    <!-- Importando o CSS do SimpleLightbox, primeiro, mantendo a prioridade do css local -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.css">
+    <!-- Sempre chame seu css por ultimo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Galeria de Fotos usando a lib SimpleLightbox</h1>
+    <p>Site oficial: <a href="https://simplelightbox.js.org/" target="_blank">SimpleLightbox</a></p>
+
+    <div class="galeria">
+        <a href="imagens/grande1.jpg" title="Montanhas verdejantes">
+            <img src="imagens/thumb1.jpg" alt="">
+        </a>
+
+        <a href="imagens/grande2.jpg" title="Céu estrelado">
+            <img src="imagens/thumb2.jpg" alt="">
+        </a>
+
+        <a href="imagens/grande3.jpg" title="Colina sob a bacia">
+            <img src="imagens/thumb3.jpg" alt="">
+        </a>
+
+        <a href="imagens/grande4.jpg" title="Trem entre as montanhas">
+            <img src="imagens/thumb4.jpg" alt="">
+        </a>
+
+        <a href="imagens/grande5.jpg" title="Lua de sangue">
+            <img src="imagens/thumb5.jpg" alt="">
+        </a>
+
+        <a href="imagens/grande6.jpg" title="Caminho das indias">
+            <img src="imagens/thumb6.jpg" alt="">
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplelightbox@2.14.3/dist/simple-lightbox.min.js"></script>
+
+    <script src="galeria.js"></script>
+</body>
+
+</html>
